@@ -27,3 +27,6 @@ php artisan migrate
 ## 🧭 Roadmap
 
 - [ ] Write automated tests
+- [ ] Implement caching for frequently accessed short links (e.g., via Redis)
+- [ ] Support URL expiration
+- [ ] Allow custom short codes
