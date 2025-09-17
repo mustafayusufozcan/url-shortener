@@ -12,7 +12,7 @@ Route::middleware('guest')->group(function () {
 Route::middleware(['auth:sanctum', 'throttle:60,1'])->group(function () {
     Route::prefix('user/')->name('user.')->group(function () {
         Route::get('me', [UserController::class, 'me'])->name('me');
-        Route::post('update_password', [UserController::class, 'updatePassword'])->name('update_password');
+        Route::patch('password', [UserController::class, 'updatePassword'])->name('update_password');
     });
 
     Route::apiResource('urls', UrlController::class)->only(['index', 'show', 'destroy']);
